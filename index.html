@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center">My Calculator</h1>
+    <script src="/scripts.js"></script>
+    <div align="center">
+        <table style="width:30%; text-align: center;">
+            <tr style="height: 50px">
+                <td style="text-align: center" colspan="4">
+                    <input type="text" id="display" />
+                </td>
+
+            </tr>
+            <tr>
+                <td style="width: 5%; height: 30px">
+                    <button onclick="getNumber(7)">7</button>
+                </td>
+                <td style="width: 5%">
+                    <button onclick="getNumber(8)">8</button>
+                </td>
+                <td style="width: 5%">
+                    <button onclick="getNumber(9)">9</button>
+                </td>
+                <td style="width: 5%">
+                    <button onclick="getOperator('/')">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 5%; height: 30px">
+                    <button onclick="getNumber(4)">4</button>
+                </td>
+                <td>
+                    <button onclick="getNumber(5)">5</button>
+                </td>
+                <td>
+                    <button onclick="getNumber(6)">6</button>
+                </td>
+                <td>
+                    <button onclick="getOperator('*')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 5%; height: 30px">
+                    <button onclick="getNumber(1)">1</button>
+                </td>
+                <td>
+                    <button onclick="getNumber(2)">2</button>
+                </td>
+                <td>
+                    <button onclick="getNumber(3)">3</button>
+                </td>
+                <td>
+                    <button onclick="getOperator('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 5%; height: 30px">
+                    <button onclick="getNumber('0')">0</button>
+                </td>
+                <td>
+                    <button onclick="getClear('CE')">CE</button>
+                </td>
+                <td>
+                    <button onclick="getOperator('+')">+</button>
+                </td>
+                <td>
+                    <button id="output" onclick="equals()">=</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
