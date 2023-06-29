@@ -17,6 +17,8 @@ let myArray = []
 // 3. then we condense all the numbers in the array - 146 - how? 
 // 4. then we could save that big number into firstNum = 146 - ok
 
+// 5. finalize the calculator with > 1 digits using array push/join & Number convertor
+
 function getNumber(num) {
     myArray.push(num)  //adding new numbers to myArray
     let y = myArray.push(num)
