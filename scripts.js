@@ -9,8 +9,8 @@ let secondNum
 let operation
 let result
 let step = 0
-const allNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-let myArray = []
+let firstArray = []
+let secondArray = []
 
 // 1. need an global array - []
 // 2. we need to keep putting numbers the global array - [1,4,6] - how? push, unshift, splice
@@ -20,31 +20,31 @@ let myArray = []
 // 5. finalize the calculator with > 1 digits using array push/join & Number convertor
 
 function getNumber(num) {
-    myArray.push(num)  //adding new numbers to myArray
-    let y = myArray.push(num)
-    console.log(y)
-    console.log(myArray.join(''))  //
-    const x = myArray.join('')  //join method to combine numners in from myArray into a string, then creating x varibale for it
-    firstNum = Number(x)  //number method to change x string into number, assigning firstNum to it
-    console.log(typeof x)
-    console.log(Number(firstNum))
-    console.log('firstNum', typeof firstNum)
-    
     if (step === 0) {
-        firstNum = num
-        step = 1
+        firstArray.push(num)
+        step = 1 
+        firstNum = Number(firstArray.join(''))
+        document.getElementById("display").value = firstNum
     } else if (step === 2) {
-        secondNum = num
+        secondArray.push(num)
+        secondNum = Number(secondArray.join(''))
+        document.getElementById("display").value = secondNum
     }
-    console.log(num)
-    document.getElementById("display").value = num
+
+    // myArray.push(num)  //adding new numbers to myArray using the push method, then creating y variable for it
+    // myArray.join('')  //join method to combine numbers in myArray into a string, then creating jointNum varibale for it 
+    // Number(myArray)
+
+    // console.log(num)
+    // document.getElementById("display").value = num
+    // document.getElementById("display").value = myArray
 }
 
 function getOperator(opps) {
-    console.log(opps)
     operation = opps
     step = 2
 
+    // console.log(opps)
     document.getElementById("display").value = opps
 }
 
@@ -62,14 +62,17 @@ function equals() {
     }
 
     document.getElementById("display").value = result
+    // console.log(result)
 }
 
 function getClear() {
-    console.log()
     step = 0
     firstNum = 0
     secondNum = 0
     result = 0
+    firstArray = []
+    secondArray = []
+    operation = null
 
     document.getElementById("display").value = result
 }
