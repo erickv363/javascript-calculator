@@ -1,8 +1,22 @@
 body{
-    background-color: whitesmoke;
+    background-color: white;
 }
 table, th, td {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
-    border-spacing: 8px;
+    border-spacing: 10px;
+    background-color: slategray;
+    font-size: 50px;
+  }
+
+  h1 {
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70px;
+  }
+
+  button {
+      background-color: slategray;
+      border: 5px;
+      padding: 30px;
   }
