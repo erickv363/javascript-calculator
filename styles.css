@@ -1,6 +1,16 @@
 body{
     background-color: white;
 }
+
+table {
+    text-align: center;
+    width: 30%;
+}
+
+tr {
+    height: 50px;
+}
+
 table, th, td {
     border: 2px solid black;
     border-radius: 10px;
@@ -13,6 +23,7 @@ table, th, td {
     color: darkblue;
     font-family: 'Times New Roman', Times, serif;
     font-size: 70px;
+    text-align: center;
   }
 
   button {

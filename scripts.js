@@ -11,6 +11,7 @@ let result
 let step = 0
 let firstArray = []
 let secondArray = []
+let display = document.getElementById("display")
 
 // 1. need an global array - []
 // 2. we need to keep putting numbers the global array - [1,4,6] - how? push, unshift, splice
@@ -20,15 +21,15 @@ let secondArray = []
 // 5. finalize the calculator with > 1 digits using array push/join & Number convertor
 
 function getNumber(num) {
-    if (step === 0) {
-        firstArray.push(num)
+    if (step === 0 || step === 1) {
+        firstArray.push(num) // adding number to array 
         step = 1 
         firstNum = Number(firstArray.join(''))
-        document.getElementById("display").value = firstNum
+        display.value = firstNum
     } else if (step === 2) {
         secondArray.push(num)
         secondNum = Number(secondArray.join(''))
-        document.getElementById("display").value = secondNum
+        display.value = secondNum
     }
 
     // myArray.push(num)  //adding new numbers to myArray using the push method, then creating y variable for it
@@ -36,16 +37,14 @@ function getNumber(num) {
     // Number(myArray)
 
     // console.log(num)
-    // document.getElementById("display").value = num
-    // document.getElementById("display").value = myArray
+    // display.value = num
+    // display.value = myArray
 }
 
 function getOperator(opps) {
     operation = opps
     step = 2
-
-    // console.log(opps)
-    document.getElementById("display").value = opps
+    display.value = opps
 }
 
 
@@ -61,8 +60,7 @@ function equals() {
         result = firstNum / secondNum
     }
 
-    document.getElementById("display").value = result
-    // console.log(result)
+    display.value = result // re-asising 
 }
 
 function getClear() {
@@ -73,6 +71,5 @@ function getClear() {
     firstArray = []
     secondArray = []
     operation = null
-
-    document.getElementById("display").value = result
+    display.value = result
 }
