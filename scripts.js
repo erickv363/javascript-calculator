@@ -20,10 +20,10 @@ function getNumber(num) {
   }
 }
 
-function getOperator(opps) {
-  operation = opps
+function getOperator(op) {
+  operation = op
   step = 2
-  display.value = opps
+  display.value = op
 }
 
 function equals() {
